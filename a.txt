@@ -6,3 +6,5 @@ Mudanças brach
  
 
 enviando funcionalidade x
+
+enviando a funcionalidade b
