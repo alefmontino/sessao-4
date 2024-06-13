@@ -1,1 +1,2 @@
-nova funcionalidade
+dev 1 = nova funcionalidade
+dev 2 = atualizacao
