@@ -1,0 +1,83 @@
+Switched to a new branch 'add_c_2'
+PS D:\Estudos Git\Sessao 4\producao> git submodule
+PS D:\Estudos Git\Sessao 4\producao> git submodule add https://github.com/alefmontino/submodule.git submodule
+Cloning into 'D:/Estudos Git/Sessao 4/producao/submodule'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (3/3), done.
+warning: in the working copy of '.gitmodules', LF will be replaced by CRLF the next time Git touches it
+PS D:\Estudos Git\Sessao 4\producao> git submodule
+ 8cd065c36d3bc537072fb6a844c835c61f10e8e1 submodule (heads/main)
+PS D:\Estudos Git\Sessao 4\producao> cd submodule
+PS D:\Estudos Git\Sessao 4\producao\submodule> git pull
+Already up to date.
+PS D:\Estudos Git\Sessao 4\producao\submodule> git pull
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 956 bytes | 191.00 KiB/s, done.
+From https://github.com/alefmontino/submodule
+   8cd065c..0e2501f  main       -> origin/main
+Updating 8cd065c..0e2501f
+Fast-forward
+ arq.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 arq.txt
+PS D:\Estudos Git\Sessao 4\producao\submodule> git add .
+PS D:\Estudos Git\Sessao 4\producao\submodule> git commig -a -m "submodule"
+git: 'commig' is not a git command. See 'git --help'.
+
+The most similar command is
+        commit
+PS D:\Estudos Git\Sessao 4\producao\submodule> git add .
+PS D:\Estudos Git\Sessao 4\producao\submodule> git commit -a -m "sub"
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+PS D:\Estudos Git\Sessao 4\producao\submodule> git push --recurse-submodules=on-demand
+Everything up-to-date
+PS D:\Estudos Git\Sessao 4\producao\submodule> git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+-------------------- COMANDO UTILIZADOS --------------------------------
+
+
+PS D:\Estudos Git\Sessao 4\producao> cd submodule
+PS D:\Estudos Git\Sessao 4\producao\submodule> git add .
+PS D:\Estudos Git\Sessao 4\producao\submodule> git commit -a -m "teste"
+[main 8b2ce65] teste
+ 1 file changed, 1 insertion(+)
+PS D:\Estudos Git\Sessao 4\producao\submodule> git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 310 bytes | 310.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/alefmontino/submodule.git
+   0e2501f..8b2ce65  main -> main
+PS D:\Estudos Git\Sessao 4\producao\submodule> git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+PS D:\Estudos Git\Sessao 4\producao\submodule> git add . 
+PS D:\Estudos Git\Sessao 4\producao\submodule> git add .
+PS D:\Estudos Git\Sessao 4\producao\submodule> git commit -a -m "novo"
+[main f300c18] novo
+ 1 file changed, 1 insertion(+)
+ create mode 100644 novo.txt
+PS D:\Estudos Git\Sessao 4\producao\submodule> git push --recurse-submodules=on-demand
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 307 bytes | 307.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/alefmontino/submodule.git
+   8b2ce65..f300c18  main -> main
+PS D:\Estudos Git\Sessao 4\producao\submodule> cd..
